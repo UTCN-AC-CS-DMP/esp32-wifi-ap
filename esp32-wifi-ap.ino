@@ -32,7 +32,6 @@ const String HTML_WELCOME = "<h1>Welcome to your ESP32 Web Server!</h1>";
 const String HTML_TOGGLE_INFO = "<div>This URL toggles the built-in LED</div><br />";
 const String HTML_TOGGLE_CHANGE = "<div>In order to change it, <span style=\"color: red\">please refresh this page in the browser</span></div>";
 
-
 // BASIC WIFI CONFIGURATION CONSTANTS
 // The SSID (Service Set IDentifier), in other words, the network's name
 const char *SSID = "DMP_ESP32_AP";
@@ -119,7 +118,7 @@ void loop() {
         }
 
         // INDIVIDUAL WORK TO IMPLEMENT READING FROM SENSOR
-        // Modify in web_functions.cpp
+        // See method at the bottom of the file
         if (currentLine.endsWith("GET /read-sens")) {
           Serial.println();
           printReadSensor(client);
